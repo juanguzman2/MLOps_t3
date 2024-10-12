@@ -85,7 +85,7 @@ x-airflow-common:
     AIRFLOW__SMTP__START_TLS: False
     AIRFLOW__SMTP__SMTP_SSL: False
     AIRFLOW__SMTP__SMTP_USER: sojuanesi4@gmail.com
-    AIRFLOW__SMTP__SMTP_PASSWORD: ukir yyac jlww xydu
+    AIRFLOW__SMTP__SMTP_PASSWORD: jjjjjj
     AIRFLOW__SMTP__SMTP_PORT: 587
     AIRFLOW__SMTP__SMTP_MAIL_FROM: sojuanesi4@gmail.com
 
