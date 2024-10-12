@@ -1,0 +1,111 @@
+[2024-10-12T04:28:01.703-0500] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-10-12T04:28:01.770-0500] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: monitor_maintain_dag_v1_3.prediction_model manual__2024-10-12T09:24:17.715612+00:00 [queued]>
+[2024-10-12T04:28:01.782-0500] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: monitor_maintain_dag_v1_3.prediction_model manual__2024-10-12T09:24:17.715612+00:00 [queued]>
+[2024-10-12T04:28:01.782-0500] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-10-12T04:28:01.811-0500] {taskinstance.py:2330} INFO - Executing <Task(_PythonVirtualenvDecoratedOperator): prediction_model> on 2024-10-12 09:24:17.715612+00:00
+[2024-10-12T04:28:01.822-0500] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62: DeprecationWarning: This process (pid=225) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-12T04:28:01.825-0500] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'monitor_maintain_dag_v1_3', 'prediction_model', 'manual__2024-10-12T09:24:17.715612+00:00', '--job-id', '40', '--raw', '--subdir', 'DAGS_FOLDER/train/train_dag.py', '--cfg-path', '/tmp/tmpvf0e9ncv']
+[2024-10-12T04:28:01.828-0500] {standard_task_runner.py:64} INFO - Started process 226 to run task
+[2024-10-12T04:28:01.828-0500] {standard_task_runner.py:91} INFO - Job 40: Subtask prediction_model
+[2024-10-12T04:28:01.881-0500] {task_command.py:426} INFO - Running <TaskInstance: monitor_maintain_dag_v1_3.prediction_model manual__2024-10-12T09:24:17.715612+00:00 [running]> on host 9f5514a2a604
+[2024-10-12T04:28:02.020-0500] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='monitor_maintain_dag_v1_3' AIRFLOW_CTX_TASK_ID='prediction_model' AIRFLOW_CTX_EXECUTION_DATE='2024-10-12T09:24:17.715612+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-12T09:24:17.715612+00:00'
+[2024-10-12T04:28:02.022-0500] {taskinstance.py:430} INFO - ::endgroup::
+[2024-10-12T04:28:02.025-0500] {process_utils.py:183} INFO - Executing cmd: /home/***/.local/bin/python -m virtualenv /tmp/venv__tkhd4f --python=python
+[2024-10-12T04:28:02.027-0500] {process_utils.py:187} INFO - Output:
+[2024-10-12T04:28:03.005-0500] {process_utils.py:191} INFO - created virtual environment CPython3.12.4.final.0-64 in 379ms
+[2024-10-12T04:28:03.006-0500] {process_utils.py:191} INFO -   creator CPython3Posix(dest=/tmp/venv__tkhd4f, clear=False, no_vcs_ignore=False, global=False)
+[2024-10-12T04:28:03.006-0500] {process_utils.py:191} INFO -   seeder FromAppData(download=False, pip=bundle, via=copy, app_data_dir=/home/***/.local/share/virtualenv)
+[2024-10-12T04:28:03.007-0500] {process_utils.py:191} INFO -     added seed packages: pip==24.1
+[2024-10-12T04:28:03.008-0500] {process_utils.py:191} INFO -   activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+[2024-10-12T04:28:03.039-0500] {process_utils.py:183} INFO - Executing cmd: /tmp/venv__tkhd4f/bin/pip install -r /tmp/venv__tkhd4f/requirements.txt
+[2024-10-12T04:28:03.040-0500] {process_utils.py:187} INFO - Output:
+[2024-10-12T04:28:05.090-0500] {process_utils.py:191} INFO - Collecting joblib (from -r /tmp/venv__tkhd4f/requirements.txt (line 1))
+[2024-10-12T04:28:05.092-0500] {process_utils.py:191} INFO -   Using cached joblib-1.4.2-py3-none-any.whl.metadata (5.4 kB)
+[2024-10-12T04:28:05.402-0500] {process_utils.py:191} INFO - Collecting numpy (from -r /tmp/venv__tkhd4f/requirements.txt (line 2))
+[2024-10-12T04:28:05.404-0500] {process_utils.py:191} INFO -   Using cached numpy-2.1.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (60 kB)
+[2024-10-12T04:28:05.682-0500] {process_utils.py:191} INFO - Collecting pandas (from -r /tmp/venv__tkhd4f/requirements.txt (line 3))
+[2024-10-12T04:28:05.684-0500] {process_utils.py:191} INFO -   Using cached pandas-2.2.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (89 kB)
+[2024-10-12T04:28:05.899-0500] {process_utils.py:191} INFO - Collecting scikit-learn (from -r /tmp/venv__tkhd4f/requirements.txt (line 4))
+[2024-10-12T04:28:05.901-0500] {process_utils.py:191} INFO -   Using cached scikit_learn-1.5.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (13 kB)
+[2024-10-12T04:28:05.991-0500] {process_utils.py:191} INFO - Collecting python-dateutil>=2.8.2 (from pandas->-r /tmp/venv__tkhd4f/requirements.txt (line 3))
+[2024-10-12T04:28:05.994-0500] {process_utils.py:191} INFO -   Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+[2024-10-12T04:28:06.094-0500] {process_utils.py:191} INFO - Collecting pytz>=2020.1 (from pandas->-r /tmp/venv__tkhd4f/requirements.txt (line 3))
+[2024-10-12T04:28:06.095-0500] {process_utils.py:191} INFO -   Using cached pytz-2024.2-py2.py3-none-any.whl.metadata (22 kB)
+[2024-10-12T04:28:06.169-0500] {process_utils.py:191} INFO - Collecting tzdata>=2022.7 (from pandas->-r /tmp/venv__tkhd4f/requirements.txt (line 3))
+[2024-10-12T04:28:06.170-0500] {process_utils.py:191} INFO -   Using cached tzdata-2024.2-py2.py3-none-any.whl.metadata (1.4 kB)
+[2024-10-12T04:28:06.395-0500] {process_utils.py:191} INFO - Collecting scipy>=1.6.0 (from scikit-learn->-r /tmp/venv__tkhd4f/requirements.txt (line 4))
+[2024-10-12T04:28:06.397-0500] {process_utils.py:191} INFO -   Using cached scipy-1.14.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (60 kB)
+[2024-10-12T04:28:06.491-0500] {process_utils.py:191} INFO - Collecting threadpoolctl>=3.1.0 (from scikit-learn->-r /tmp/venv__tkhd4f/requirements.txt (line 4))
+[2024-10-12T04:28:06.493-0500] {process_utils.py:191} INFO -   Using cached threadpoolctl-3.5.0-py3-none-any.whl.metadata (13 kB)
+[2024-10-12T04:28:06.553-0500] {process_utils.py:191} INFO - Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas->-r /tmp/venv__tkhd4f/requirements.txt (line 3))
+[2024-10-12T04:28:06.556-0500] {process_utils.py:191} INFO -   Using cached six-1.16.0-py2.py3-none-any.whl.metadata (1.8 kB)
+[2024-10-12T04:28:06.581-0500] {process_utils.py:191} INFO - Using cached joblib-1.4.2-py3-none-any.whl (301 kB)
+[2024-10-12T04:28:06.586-0500] {process_utils.py:191} INFO - Using cached numpy-2.1.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.0 MB)
+[2024-10-12T04:28:06.641-0500] {process_utils.py:191} INFO - Using cached pandas-2.2.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.7 MB)
+[2024-10-12T04:28:06.706-0500] {process_utils.py:191} INFO - Using cached scikit_learn-1.5.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.9 MB)
+[2024-10-12T04:28:06.772-0500] {process_utils.py:191} INFO - Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+[2024-10-12T04:28:06.776-0500] {process_utils.py:191} INFO - Using cached pytz-2024.2-py2.py3-none-any.whl (508 kB)
+[2024-10-12T04:28:06.781-0500] {process_utils.py:191} INFO - Using cached scipy-1.14.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (40.8 MB)
+[2024-10-12T04:28:07.015-0500] {process_utils.py:191} INFO - Using cached threadpoolctl-3.5.0-py3-none-any.whl (18 kB)
+[2024-10-12T04:28:07.017-0500] {process_utils.py:191} INFO - Using cached tzdata-2024.2-py2.py3-none-any.whl (346 kB)
+[2024-10-12T04:28:07.022-0500] {process_utils.py:191} INFO - Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+[2024-10-12T04:28:07.366-0500] {process_utils.py:191} INFO - Installing collected packages: pytz, tzdata, threadpoolctl, six, numpy, joblib, scipy, python-dateutil, scikit-learn, pandas
+[2024-10-12T04:28:40.652-0500] {process_utils.py:191} INFO - Successfully installed joblib-1.4.2 numpy-2.1.2 pandas-2.2.3 python-dateutil-2.9.0.post0 pytz-2024.2 scikit-learn-1.5.2 scipy-1.14.1 six-1.16.0 threadpoolctl-3.5.0 tzdata-2024.2
+[2024-10-12T04:28:40.869-0500] {process_utils.py:191} INFO - 
+[2024-10-12T04:28:40.870-0500] {process_utils.py:191} INFO - [notice] A new release of pip is available: 24.1 -> 24.2
+[2024-10-12T04:28:40.871-0500] {process_utils.py:191} INFO - [notice] To update, run: python -m pip install --upgrade pip
+[2024-10-12T04:28:41.107-0500] {process_utils.py:183} INFO - Executing cmd: /tmp/venv__tkhd4f/bin/python /tmp/venv-callac7fe9gr/script.py /tmp/venv-callac7fe9gr/script.in /tmp/venv-callac7fe9gr/script.out /tmp/venv-callac7fe9gr/string_args.txt /tmp/venv-callac7fe9gr/termination.log
+[2024-10-12T04:28:41.108-0500] {process_utils.py:187} INFO - Output:
+[2024-10-12T04:28:42.242-0500] {process_utils.py:191} INFO - Traceback (most recent call last):
+[2024-10-12T04:28:42.244-0500] {process_utils.py:191} INFO -   File "/tmp/venv-callac7fe9gr/script.py", line 63, in <module>
+[2024-10-12T04:28:42.245-0500] {process_utils.py:191} INFO -     res = task_predictionnmodel(*arg_dict["args"], **arg_dict["kwargs"])
+[2024-10-12T04:28:42.246-0500] {process_utils.py:191} INFO -           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-10-12T04:28:42.247-0500] {process_utils.py:191} INFO -   File "/tmp/venv-callac7fe9gr/script.py", line 28, in task_predictionnmodel
+[2024-10-12T04:28:42.248-0500] {process_utils.py:191} INFO -     classifier = load("/opt/***/dags/data/model/best_lasso_model.joblib")
+[2024-10-12T04:28:42.249-0500] {process_utils.py:191} INFO -                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-10-12T04:28:42.250-0500] {process_utils.py:191} INFO -   File "/tmp/venv__tkhd4f/lib/python3.12/site-packages/joblib/numpy_pickle.py", line 650, in load
+[2024-10-12T04:28:42.251-0500] {process_utils.py:191} INFO -     with open(filename, 'rb') as f:
+[2024-10-12T04:28:42.252-0500] {process_utils.py:191} INFO -          ^^^^^^^^^^^^^^^^^^^^
+[2024-10-12T04:28:42.253-0500] {process_utils.py:191} INFO - FileNotFoundError: [Errno 2] No such file or directory: '/opt/***/dags/data/model/best_lasso_model.joblib'
+[2024-10-12T04:28:42.620-0500] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-10-12T04:28:42.672-0500] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/decorators/base.py", line 265, in execute
+    return_value = super().execute(context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 437, in execute
+    return super().execute(context=serializable_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 759, in execute_callable
+    result = self._execute_python_callable_in_subprocess(python_path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 514, in _execute_python_callable_in_subprocess
+    raise AirflowException(error_msg) from None
+airflow.exceptions.AirflowException: Process returned non-zero exit status 1.
+[Errno 2] No such file or directory: '/opt/***/dags/data/model/best_lasso_model.joblib'
+[2024-10-12T04:28:42.690-0500] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=monitor_maintain_dag_v1_3, task_id=prediction_model, run_id=manual__2024-10-12T09:24:17.715612+00:00, execution_date=20241012T092417, start_date=20241012T092801, end_date=20241012T092842
+[2024-10-12T04:28:42.713-0500] {standard_task_runner.py:110} ERROR - Failed to execute job 40 for task prediction_model (Process returned non-zero exit status 1.
+[Errno 2] No such file or directory: '/opt/***/dags/data/model/best_lasso_model.joblib'; 226)
+[2024-10-12T04:28:42.758-0500] {local_task_job_runner.py:243} INFO - Task exited with return code 1
+[2024-10-12T04:28:42.798-0500] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-12T04:28:42.800-0500] {local_task_job_runner.py:222} INFO - ::endgroup::

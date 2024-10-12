@@ -1,0 +1,32 @@
+[2024-10-12T00:16:22.083-0500] {processor.py:161} INFO - Started process (PID=83) to work on /opt/airflow/dags/04_four_dag/monitor_maintain_dag_v1-1.py
+[2024-10-12T00:16:22.102-0500] {processor.py:830} INFO - Processing file /opt/airflow/dags/04_four_dag/monitor_maintain_dag_v1-1.py for tasks to queue
+[2024-10-12T00:16:22.202-0500] {logging_mixin.py:188} INFO - [2024-10-12T00:16:22.171-0500] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/04_four_dag/monitor_maintain_dag_v1-1.py
+[2024-10-12T00:16:22.884-0500] {processor.py:840} INFO - DAG(s) 'monitor_maintain_dag_v1-1' retrieved from /opt/airflow/dags/04_four_dag/monitor_maintain_dag_v1-1.py
+[2024-10-12T00:16:27.404-0500] {logging_mixin.py:188} INFO - [2024-10-12T00:16:27.401-0500] {override.py:1858} INFO - Created Permission View: can edit on DAG:monitor_maintain_dag_v1-1
+[2024-10-12T00:16:27.450-0500] {logging_mixin.py:188} INFO - [2024-10-12T00:16:27.449-0500] {override.py:1858} INFO - Created Permission View: can read on DAG:monitor_maintain_dag_v1-1
+[2024-10-12T00:16:27.462-0500] {logging_mixin.py:188} INFO - [2024-10-12T00:16:27.462-0500] {override.py:1858} INFO - Created Permission View: can delete on DAG:monitor_maintain_dag_v1-1
+[2024-10-12T00:16:27.465-0500] {logging_mixin.py:188} INFO - [2024-10-12T00:16:27.464-0500] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-10-12T00:16:27.547-0500] {logging_mixin.py:188} INFO - [2024-10-12T00:16:27.546-0500] {dag.py:3111} INFO - Creating ORM DAG for monitor_maintain_dag_v1-1
+[2024-10-12T00:16:27.556-0500] {logging_mixin.py:188} INFO - [2024-10-12T00:16:27.556-0500] {dag.py:3947} INFO - Setting next_dagrun for monitor_maintain_dag_v1-1 to None, run_after=None
+[2024-10-12T00:16:27.657-0500] {processor.py:183} INFO - Processing /opt/airflow/dags/04_four_dag/monitor_maintain_dag_v1-1.py took 5.705 seconds
+[2024-10-12T00:16:58.004-0500] {processor.py:161} INFO - Started process (PID=101) to work on /opt/airflow/dags/04_four_dag/monitor_maintain_dag_v1-1.py
+[2024-10-12T00:16:58.005-0500] {processor.py:830} INFO - Processing file /opt/airflow/dags/04_four_dag/monitor_maintain_dag_v1-1.py for tasks to queue
+[2024-10-12T00:16:58.008-0500] {logging_mixin.py:188} INFO - [2024-10-12T00:16:58.007-0500] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/04_four_dag/monitor_maintain_dag_v1-1.py
+[2024-10-12T00:16:58.031-0500] {processor.py:840} INFO - DAG(s) 'monitor_maintain_dag_v1-1' retrieved from /opt/airflow/dags/04_four_dag/monitor_maintain_dag_v1-1.py
+[2024-10-12T00:16:58.064-0500] {logging_mixin.py:188} INFO - [2024-10-12T00:16:58.064-0500] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-10-12T00:16:58.078-0500] {logging_mixin.py:188} INFO - [2024-10-12T00:16:58.078-0500] {dag.py:3947} INFO - Setting next_dagrun for monitor_maintain_dag_v1-1 to None, run_after=None
+[2024-10-12T00:16:58.108-0500] {processor.py:183} INFO - Processing /opt/airflow/dags/04_four_dag/monitor_maintain_dag_v1-1.py took 0.111 seconds
+[2024-10-12T00:17:28.274-0500] {processor.py:161} INFO - Started process (PID=120) to work on /opt/airflow/dags/04_four_dag/monitor_maintain_dag_v1-1.py
+[2024-10-12T00:17:28.275-0500] {processor.py:830} INFO - Processing file /opt/airflow/dags/04_four_dag/monitor_maintain_dag_v1-1.py for tasks to queue
+[2024-10-12T00:17:28.277-0500] {logging_mixin.py:188} INFO - [2024-10-12T00:17:28.277-0500] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/04_four_dag/monitor_maintain_dag_v1-1.py
+[2024-10-12T00:17:28.311-0500] {processor.py:840} INFO - DAG(s) 'monitor_maintain_dag_v1-1' retrieved from /opt/airflow/dags/04_four_dag/monitor_maintain_dag_v1-1.py
+[2024-10-12T00:17:28.349-0500] {logging_mixin.py:188} INFO - [2024-10-12T00:17:28.349-0500] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-10-12T00:17:28.400-0500] {logging_mixin.py:188} INFO - [2024-10-12T00:17:28.399-0500] {dag.py:3947} INFO - Setting next_dagrun for monitor_maintain_dag_v1-1 to None, run_after=None
+[2024-10-12T00:17:28.432-0500] {processor.py:183} INFO - Processing /opt/airflow/dags/04_four_dag/monitor_maintain_dag_v1-1.py took 0.165 seconds
+[2024-10-12T00:17:58.614-0500] {processor.py:161} INFO - Started process (PID=139) to work on /opt/airflow/dags/04_four_dag/monitor_maintain_dag_v1-1.py
+[2024-10-12T00:17:58.615-0500] {processor.py:830} INFO - Processing file /opt/airflow/dags/04_four_dag/monitor_maintain_dag_v1-1.py for tasks to queue
+[2024-10-12T00:17:58.617-0500] {logging_mixin.py:188} INFO - [2024-10-12T00:17:58.617-0500] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/04_four_dag/monitor_maintain_dag_v1-1.py
+[2024-10-12T00:17:58.638-0500] {processor.py:840} INFO - DAG(s) 'monitor_maintain_dag_v1-1' retrieved from /opt/airflow/dags/04_four_dag/monitor_maintain_dag_v1-1.py
+[2024-10-12T00:17:58.678-0500] {logging_mixin.py:188} INFO - [2024-10-12T00:17:58.677-0500] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-10-12T00:17:58.713-0500] {logging_mixin.py:188} INFO - [2024-10-12T00:17:58.713-0500] {dag.py:3947} INFO - Setting next_dagrun for monitor_maintain_dag_v1-1 to None, run_after=None
+[2024-10-12T00:17:58.744-0500] {processor.py:183} INFO - Processing /opt/airflow/dags/04_four_dag/monitor_maintain_dag_v1-1.py took 0.137 seconds

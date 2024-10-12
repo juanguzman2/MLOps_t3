@@ -1,0 +1,64 @@
+[2024-10-12T00:16:29.214-0500] {processor.py:161} INFO - Started process (PID=85) to work on /opt/airflow/dags/04_four_dag/monitor_maintain_dag_v1-3.py
+[2024-10-12T00:16:29.225-0500] {processor.py:830} INFO - Processing file /opt/airflow/dags/04_four_dag/monitor_maintain_dag_v1-3.py for tasks to queue
+[2024-10-12T00:16:29.317-0500] {logging_mixin.py:188} INFO - [2024-10-12T00:16:29.316-0500] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/04_four_dag/monitor_maintain_dag_v1-3.py
+[2024-10-12T00:16:29.559-0500] {logging_mixin.py:188} INFO - [2024-10-12T00:16:29.519-0500] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/04_four_dag/monitor_maintain_dag_v1-3.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/04_four_dag/monitor_maintain_dag_v1-3.py", line 9, in <module>
+    from common.add_task import task_monitoringmodel, task_trainmodel
+  File "/opt/airflow/dags/common/add_task.py", line 4, in <module>
+    import joblib
+ModuleNotFoundError: No module named 'joblib'
+[2024-10-12T00:16:29.564-0500] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/04_four_dag/monitor_maintain_dag_v1-3.py
+[2024-10-12T00:16:30.858-0500] {processor.py:183} INFO - Processing /opt/airflow/dags/04_four_dag/monitor_maintain_dag_v1-3.py took 2.668 seconds
+[2024-10-12T00:17:04.450-0500] {processor.py:161} INFO - Started process (PID=104) to work on /opt/airflow/dags/04_four_dag/monitor_maintain_dag_v1-3.py
+[2024-10-12T00:17:04.455-0500] {processor.py:830} INFO - Processing file /opt/airflow/dags/04_four_dag/monitor_maintain_dag_v1-3.py for tasks to queue
+[2024-10-12T00:17:04.488-0500] {logging_mixin.py:188} INFO - [2024-10-12T00:17:04.466-0500] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/04_four_dag/monitor_maintain_dag_v1-3.py
+[2024-10-12T00:17:04.823-0500] {logging_mixin.py:188} INFO - [2024-10-12T00:17:04.807-0500] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/04_four_dag/monitor_maintain_dag_v1-3.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/04_four_dag/monitor_maintain_dag_v1-3.py", line 9, in <module>
+    from common.add_task import task_monitoringmodel, task_trainmodel
+  File "/opt/airflow/dags/common/add_task.py", line 4, in <module>
+    import joblib
+ModuleNotFoundError: No module named 'joblib'
+[2024-10-12T00:17:04.830-0500] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/04_four_dag/monitor_maintain_dag_v1-3.py
+[2024-10-12T00:17:05.311-0500] {processor.py:183} INFO - Processing /opt/airflow/dags/04_four_dag/monitor_maintain_dag_v1-3.py took 0.950 seconds
+[2024-10-12T00:17:36.404-0500] {processor.py:161} INFO - Started process (PID=124) to work on /opt/airflow/dags/04_four_dag/monitor_maintain_dag_v1-3.py
+[2024-10-12T00:17:36.531-0500] {processor.py:830} INFO - Processing file /opt/airflow/dags/04_four_dag/monitor_maintain_dag_v1-3.py for tasks to queue
+[2024-10-12T00:17:36.535-0500] {logging_mixin.py:188} INFO - [2024-10-12T00:17:36.535-0500] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/04_four_dag/monitor_maintain_dag_v1-3.py
+[2024-10-12T00:17:37.546-0500] {logging_mixin.py:188} INFO - [2024-10-12T00:17:37.535-0500] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/04_four_dag/monitor_maintain_dag_v1-3.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/04_four_dag/monitor_maintain_dag_v1-3.py", line 9, in <module>
+    from common.add_task import task_monitoringmodel, task_trainmodel
+  File "/opt/airflow/dags/common/add_task.py", line 4, in <module>
+    import joblib
+ModuleNotFoundError: No module named 'joblib'
+[2024-10-12T00:17:37.549-0500] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/04_four_dag/monitor_maintain_dag_v1-3.py
+[2024-10-12T00:17:38.493-0500] {processor.py:183} INFO - Processing /opt/airflow/dags/04_four_dag/monitor_maintain_dag_v1-3.py took 2.730 seconds
+[2024-10-12T00:18:09.431-0500] {processor.py:161} INFO - Started process (PID=143) to work on /opt/airflow/dags/04_four_dag/monitor_maintain_dag_v1-3.py
+[2024-10-12T00:18:09.432-0500] {processor.py:830} INFO - Processing file /opt/airflow/dags/04_four_dag/monitor_maintain_dag_v1-3.py for tasks to queue
+[2024-10-12T00:18:09.434-0500] {logging_mixin.py:188} INFO - [2024-10-12T00:18:09.433-0500] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/04_four_dag/monitor_maintain_dag_v1-3.py
+[2024-10-12T00:18:09.467-0500] {logging_mixin.py:188} INFO - [2024-10-12T00:18:09.460-0500] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/04_four_dag/monitor_maintain_dag_v1-3.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/04_four_dag/monitor_maintain_dag_v1-3.py", line 9, in <module>
+    from common.add_task import task_monitoringmodel, task_trainmodel
+  File "/opt/airflow/dags/common/add_task.py", line 4, in <module>
+    import joblib
+ModuleNotFoundError: No module named 'joblib'
+[2024-10-12T00:18:09.469-0500] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/04_four_dag/monitor_maintain_dag_v1-3.py
+[2024-10-12T00:18:09.489-0500] {processor.py:183} INFO - Processing /opt/airflow/dags/04_four_dag/monitor_maintain_dag_v1-3.py took 0.064 seconds

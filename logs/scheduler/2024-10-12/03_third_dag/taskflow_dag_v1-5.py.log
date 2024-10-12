@@ -1,0 +1,64 @@
+[2024-10-12T00:16:05.460-0500] {processor.py:161} INFO - Started process (PID=74) to work on /opt/airflow/dags/03_third_dag/taskflow_dag_v1-5.py
+[2024-10-12T00:16:05.470-0500] {processor.py:830} INFO - Processing file /opt/airflow/dags/03_third_dag/taskflow_dag_v1-5.py for tasks to queue
+[2024-10-12T00:16:05.490-0500] {logging_mixin.py:188} INFO - [2024-10-12T00:16:05.489-0500] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/03_third_dag/taskflow_dag_v1-5.py
+[2024-10-12T00:16:17.586-0500] {logging_mixin.py:188} INFO - [2024-10-12T00:16:15.465-0500] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/03_third_dag/taskflow_dag_v1-5.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/03_third_dag/taskflow_dag_v1-5.py", line 8, in <module>
+    from common.add_task import task_trainmodel
+  File "/opt/airflow/dags/common/add_task.py", line 4, in <module>
+    import joblib
+ModuleNotFoundError: No module named 'joblib'
+[2024-10-12T00:16:17.839-0500] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/03_third_dag/taskflow_dag_v1-5.py
+[2024-10-12T00:16:19.554-0500] {processor.py:183} INFO - Processing /opt/airflow/dags/03_third_dag/taskflow_dag_v1-5.py took 14.113 seconds
+[2024-10-12T00:16:49.786-0500] {processor.py:161} INFO - Started process (PID=93) to work on /opt/airflow/dags/03_third_dag/taskflow_dag_v1-5.py
+[2024-10-12T00:16:49.787-0500] {processor.py:830} INFO - Processing file /opt/airflow/dags/03_third_dag/taskflow_dag_v1-5.py for tasks to queue
+[2024-10-12T00:16:49.790-0500] {logging_mixin.py:188} INFO - [2024-10-12T00:16:49.789-0500] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/03_third_dag/taskflow_dag_v1-5.py
+[2024-10-12T00:16:49.843-0500] {logging_mixin.py:188} INFO - [2024-10-12T00:16:49.833-0500] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/03_third_dag/taskflow_dag_v1-5.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/03_third_dag/taskflow_dag_v1-5.py", line 8, in <module>
+    from common.add_task import task_trainmodel
+  File "/opt/airflow/dags/common/add_task.py", line 4, in <module>
+    import joblib
+ModuleNotFoundError: No module named 'joblib'
+[2024-10-12T00:16:49.847-0500] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/03_third_dag/taskflow_dag_v1-5.py
+[2024-10-12T00:16:49.936-0500] {processor.py:183} INFO - Processing /opt/airflow/dags/03_third_dag/taskflow_dag_v1-5.py took 0.159 seconds
+[2024-10-12T00:17:20.919-0500] {processor.py:161} INFO - Started process (PID=112) to work on /opt/airflow/dags/03_third_dag/taskflow_dag_v1-5.py
+[2024-10-12T00:17:21.047-0500] {processor.py:830} INFO - Processing file /opt/airflow/dags/03_third_dag/taskflow_dag_v1-5.py for tasks to queue
+[2024-10-12T00:17:21.473-0500] {logging_mixin.py:188} INFO - [2024-10-12T00:17:21.469-0500] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/03_third_dag/taskflow_dag_v1-5.py
+[2024-10-12T00:17:21.835-0500] {logging_mixin.py:188} INFO - [2024-10-12T00:17:21.829-0500] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/03_third_dag/taskflow_dag_v1-5.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/03_third_dag/taskflow_dag_v1-5.py", line 8, in <module>
+    from common.add_task import task_trainmodel
+  File "/opt/airflow/dags/common/add_task.py", line 4, in <module>
+    import joblib
+ModuleNotFoundError: No module named 'joblib'
+[2024-10-12T00:17:21.838-0500] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/03_third_dag/taskflow_dag_v1-5.py
+[2024-10-12T00:17:22.718-0500] {processor.py:183} INFO - Processing /opt/airflow/dags/03_third_dag/taskflow_dag_v1-5.py took 1.806 seconds
+[2024-10-12T00:17:53.385-0500] {processor.py:161} INFO - Started process (PID=131) to work on /opt/airflow/dags/03_third_dag/taskflow_dag_v1-5.py
+[2024-10-12T00:17:53.387-0500] {processor.py:830} INFO - Processing file /opt/airflow/dags/03_third_dag/taskflow_dag_v1-5.py for tasks to queue
+[2024-10-12T00:17:53.389-0500] {logging_mixin.py:188} INFO - [2024-10-12T00:17:53.389-0500] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/03_third_dag/taskflow_dag_v1-5.py
+[2024-10-12T00:17:53.414-0500] {logging_mixin.py:188} INFO - [2024-10-12T00:17:53.409-0500] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/03_third_dag/taskflow_dag_v1-5.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/03_third_dag/taskflow_dag_v1-5.py", line 8, in <module>
+    from common.add_task import task_trainmodel
+  File "/opt/airflow/dags/common/add_task.py", line 4, in <module>
+    import joblib
+ModuleNotFoundError: No module named 'joblib'
+[2024-10-12T00:17:53.415-0500] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/03_third_dag/taskflow_dag_v1-5.py
+[2024-10-12T00:17:53.438-0500] {processor.py:183} INFO - Processing /opt/airflow/dags/03_third_dag/taskflow_dag_v1-5.py took 0.061 seconds

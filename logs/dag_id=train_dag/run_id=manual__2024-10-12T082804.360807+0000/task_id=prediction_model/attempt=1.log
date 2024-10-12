@@ -1,0 +1,532 @@
+[2024-10-12T03:49:53.451-0500] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-10-12T03:49:53.559-0500] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: train_dag.prediction_model manual__2024-10-12T08:28:04.360807+00:00 [queued]>
+[2024-10-12T03:49:53.573-0500] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: train_dag.prediction_model manual__2024-10-12T08:28:04.360807+00:00 [queued]>
+[2024-10-12T03:49:53.573-0500] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-10-12T03:49:53.604-0500] {taskinstance.py:2330} INFO - Executing <Task(_PythonVirtualenvDecoratedOperator): prediction_model> on 2024-10-12 08:28:04.360807+00:00
+[2024-10-12T03:49:53.621-0500] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'train_dag', 'prediction_model', 'manual__2024-10-12T08:28:04.360807+00:00', '--job-id', '27', '--raw', '--subdir', 'DAGS_FOLDER/train/train_dag.py', '--cfg-path', '/tmp/tmp5cus_zcc']
+[2024-10-12T03:49:53.620-0500] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62: DeprecationWarning: This process (pid=236) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-12T03:49:53.626-0500] {standard_task_runner.py:64} INFO - Started process 237 to run task
+[2024-10-12T03:49:53.625-0500] {standard_task_runner.py:91} INFO - Job 27: Subtask prediction_model
+[2024-10-12T03:49:53.705-0500] {task_command.py:426} INFO - Running <TaskInstance: train_dag.prediction_model manual__2024-10-12T08:28:04.360807+00:00 [running]> on host 81d4b92477b0
+[2024-10-12T03:49:54.682-0500] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='train_dag' AIRFLOW_CTX_TASK_ID='prediction_model' AIRFLOW_CTX_EXECUTION_DATE='2024-10-12T08:28:04.360807+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-12T08:28:04.360807+00:00'
+[2024-10-12T03:49:54.685-0500] {taskinstance.py:430} INFO - ::endgroup::
+[2024-10-12T03:49:54.696-0500] {process_utils.py:183} INFO - Executing cmd: /home/***/.local/bin/python -m virtualenv /tmp/venvq8dajlfr --python=python
+[2024-10-12T03:49:54.701-0500] {process_utils.py:187} INFO - Output:
+[2024-10-12T03:49:57.372-0500] {process_utils.py:191} INFO - created virtual environment CPython3.12.4.final.0-64 in 837ms
+[2024-10-12T03:49:57.373-0500] {process_utils.py:191} INFO -   creator CPython3Posix(dest=/tmp/venvq8dajlfr, clear=False, no_vcs_ignore=False, global=False)
+[2024-10-12T03:49:57.374-0500] {process_utils.py:191} INFO -   seeder FromAppData(download=False, pip=bundle, via=copy, app_data_dir=/home/***/.local/share/virtualenv)
+[2024-10-12T03:49:57.375-0500] {process_utils.py:191} INFO -     added seed packages: pip==24.2
+[2024-10-12T03:49:57.376-0500] {process_utils.py:191} INFO -   activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+[2024-10-12T03:49:57.413-0500] {process_utils.py:183} INFO - Executing cmd: /tmp/venvq8dajlfr/bin/pip install -r /tmp/venvq8dajlfr/requirements.txt
+[2024-10-12T03:49:57.414-0500] {process_utils.py:187} INFO - Output:
+[2024-10-12T03:49:59.349-0500] {process_utils.py:191} INFO - Collecting joblib (from -r /tmp/venvq8dajlfr/requirements.txt (line 1))
+[2024-10-12T03:49:59.353-0500] {process_utils.py:191} INFO -   Using cached joblib-1.4.2-py3-none-any.whl.metadata (5.4 kB)
+[2024-10-12T03:49:59.704-0500] {process_utils.py:191} INFO - Collecting numpy (from -r /tmp/venvq8dajlfr/requirements.txt (line 2))
+[2024-10-12T03:49:59.708-0500] {process_utils.py:191} INFO -   Using cached numpy-2.1.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (60 kB)
+[2024-10-12T03:49:59.985-0500] {process_utils.py:191} INFO - Collecting pandas (from -r /tmp/venvq8dajlfr/requirements.txt (line 3))
+[2024-10-12T03:49:59.989-0500] {process_utils.py:191} INFO -   Using cached pandas-2.2.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (89 kB)
+[2024-10-12T03:50:00.294-0500] {process_utils.py:191} INFO - Collecting scikit-learn (from -r /tmp/venvq8dajlfr/requirements.txt (line 4))
+[2024-10-12T03:50:00.298-0500] {process_utils.py:191} INFO -   Using cached scikit_learn-1.5.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (13 kB)
+[2024-10-12T03:50:00.370-0500] {process_utils.py:191} INFO - Collecting python-dateutil>=2.8.2 (from pandas->-r /tmp/venvq8dajlfr/requirements.txt (line 3))
+[2024-10-12T03:50:00.376-0500] {process_utils.py:191} INFO -   Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+[2024-10-12T03:50:00.476-0500] {process_utils.py:191} INFO - Collecting pytz>=2020.1 (from pandas->-r /tmp/venvq8dajlfr/requirements.txt (line 3))
+[2024-10-12T03:50:00.481-0500] {process_utils.py:191} INFO -   Using cached pytz-2024.2-py2.py3-none-any.whl.metadata (22 kB)
+[2024-10-12T03:50:00.535-0500] {process_utils.py:191} INFO - Collecting tzdata>=2022.7 (from pandas->-r /tmp/venvq8dajlfr/requirements.txt (line 3))
+[2024-10-12T03:50:00.538-0500] {process_utils.py:191} INFO -   Using cached tzdata-2024.2-py2.py3-none-any.whl.metadata (1.4 kB)
+[2024-10-12T03:50:00.817-0500] {process_utils.py:191} INFO - Collecting scipy>=1.6.0 (from scikit-learn->-r /tmp/venvq8dajlfr/requirements.txt (line 4))
+[2024-10-12T03:50:00.821-0500] {process_utils.py:191} INFO -   Using cached scipy-1.14.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (60 kB)
+[2024-10-12T03:50:00.972-0500] {process_utils.py:191} INFO - Collecting threadpoolctl>=3.1.0 (from scikit-learn->-r /tmp/venvq8dajlfr/requirements.txt (line 4))
+[2024-10-12T03:50:00.976-0500] {process_utils.py:191} INFO -   Using cached threadpoolctl-3.5.0-py3-none-any.whl.metadata (13 kB)
+[2024-10-12T03:50:01.029-0500] {process_utils.py:191} INFO - Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas->-r /tmp/venvq8dajlfr/requirements.txt (line 3))
+[2024-10-12T03:50:01.034-0500] {process_utils.py:191} INFO -   Using cached six-1.16.0-py2.py3-none-any.whl.metadata (1.8 kB)
+[2024-10-12T03:50:01.054-0500] {process_utils.py:191} INFO - Using cached joblib-1.4.2-py3-none-any.whl (301 kB)
+[2024-10-12T03:50:01.075-0500] {process_utils.py:191} INFO - Using cached numpy-2.1.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.0 MB)
+[2024-10-12T03:50:02.815-0500] {process_utils.py:191} INFO - Using cached pandas-2.2.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.7 MB)
+[2024-10-12T03:50:04.517-0500] {process_utils.py:191} INFO - Using cached scikit_learn-1.5.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.9 MB)
+[2024-10-12T03:50:05.399-0500] {process_utils.py:191} INFO - Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+[2024-10-12T03:50:05.430-0500] {process_utils.py:191} INFO - Using cached pytz-2024.2-py2.py3-none-any.whl (508 kB)
+[2024-10-12T03:50:05.464-0500] {process_utils.py:191} INFO - Using cached scipy-1.14.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (40.8 MB)
+[2024-10-12T03:50:09.594-0500] {process_utils.py:191} INFO - Using cached threadpoolctl-3.5.0-py3-none-any.whl (18 kB)
+[2024-10-12T03:50:09.599-0500] {process_utils.py:191} INFO - Using cached tzdata-2024.2-py2.py3-none-any.whl (346 kB)
+[2024-10-12T03:50:09.626-0500] {process_utils.py:191} INFO - Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+[2024-10-12T03:50:10.035-0500] {process_utils.py:191} INFO - Installing collected packages: pytz, tzdata, threadpoolctl, six, numpy, joblib, scipy, python-dateutil, scikit-learn, pandas
+[2024-10-12T03:50:40.327-0500] {process_utils.py:191} INFO - Successfully installed joblib-1.4.2 numpy-2.1.2 pandas-2.2.3 python-dateutil-2.9.0.post0 pytz-2024.2 scikit-learn-1.5.2 scipy-1.14.1 six-1.16.0 threadpoolctl-3.5.0 tzdata-2024.2
+[2024-10-12T03:50:40.887-0500] {process_utils.py:183} INFO - Executing cmd: /tmp/venvq8dajlfr/bin/python /tmp/venv-callf0uyiuy_/script.py /tmp/venv-callf0uyiuy_/script.in /tmp/venv-callf0uyiuy_/script.out /tmp/venv-callf0uyiuy_/string_args.txt /tmp/venv-callf0uyiuy_/termination.log
+[2024-10-12T03:50:40.889-0500] {process_utils.py:187} INFO - Output:
+[2024-10-12T03:50:43.646-0500] {process_utils.py:191} INFO - Predicción Generada
+[2024-10-12T03:50:44.176-0500] {python.py:237} INFO - Done. Returned value was:  prediction
+   0.798351
+   0.019257
+   0.435828
+   0.296227
+   0.985552
+   1.133945
+   1.133945
+   1.209268
+   1.186779
+   1.048134
+   0.019257
+   0.835784
+   0.543515
+   1.186779
+   1.007428
+   1.272270
+   0.595074
+   0.624627
+   0.544127
+   0.179779
+   1.186779
+   0.296227
+   0.464960
+   0.497454
+   0.939491
+   0.887612
+   0.435828
+   0.617884
+   1.026257
+   1.093239
+   0.536303
+   0.179779
+   0.059962
+   0.823043
+   0.635481
+   0.220484
+   1.133945
+   1.026257
+   0.220484
+   0.871252
+   0.357272
+   0.179779
+   0.761714
+   1.186779
+   0.815444
+   0.179779
+   0.179779
+   0.180391
+   0.220484
+   1.186779
+   1.164582
+   0.179779
+   0.782337
+   0.304438
+   1.186779
+   0.977403
+   0.729633
+   0.497454
+   0.328784
+   0.637216
+   0.426403
+   0.072091
+   0.266544
+   0.179779
+   0.019257
+   0.537861
+   1.026257
+   0.985552
+   1.186779
+   0.296227
+   0.931343
+   0.179779
+   0.423400
+   0.899741
+   0.244347
+   1.133945
+   0.583922
+   0.910421
+   0.583922
+   1.123877
+   1.187392
+   0.931343
+   0.179779
+   0.571793
+   0.157582
+   0.909809
+   0.340913
+   0.019257
+   0.869103
+   0.179779
+   0.823655
+   0.456749
+   1.133945
+   0.179779
+   0.674650
+   0.571793
+   0.456749
+   0.543515
+   0.954594
+   0.806499
+   0.871252
+   0.426403
+   0.328784
+   0.179779
+   0.179779
+   0.318104
+   0.179779
+   0.550450
+   0.782950
+   0.072091
+   0.179779
+   0.220484
+   0.876490
+   0.296227
+   0.729633
+   0.985552
+   0.543515
+   0.221096
+   1.186779
+   0.180391
+   0.019257
+   0.179779
+   0.179779
+   1.123877
+   0.340913
+   0.019257
+   0.266544
+   0.072091
+   1.026257
+   1.026257
+   0.456749
+   0.404869
+   1.164582
+   0.708581
+   0.543515
+   0.887612
+   0.457362
+   1.209268
+   0.931343
+   0.456749
+   0.909809
+   0.179779
+   0.729633
+   0.340913
+   0.106022
+   0.220484
+   0.158857
+   0.835784
+   0.179779
+   0.340913
+   0.180391
+   0.435828
+   0.953157
+   0.761998
+   1.186779
+   1.146686
+   1.038386
+   1.060875
+   1.164582
+   0.835784
+   0.179779
+   0.106022
+   1.164582
+   0.464960
+   0.538474
+   0.985552
+   1.186779
+   0.815444
+   0.220484
+   1.026257
+   0.019257
+   0.444038
+   1.231564
+   1.130651
+   0.909809
+   0.457362
+   0.456749
+   0.823043
+   0.912452
+   0.912452
+   0.722860
+   0.984177
+   0.887612
+   0.715355
+   0.179779
+   0.106022
+   0.019257
+   1.008041
+   0.902210
+   1.209268
+   1.164582
+   0.823043
+   1.346638
+   0.180391
+   1.038386
+   0.984177
+   1.231564
+   0.220484
+   1.164582
+   0.621815
+   1.079092
+   0.179779
+   0.890637
+   0.059962
+   0.435828
+   1.026257
+   0.761998
+   1.007428
+   0.729801
+   0.729633
+   0.543515
+   0.179779
+   0.296227
+   0.483468
+   1.014815
+   1.026257
+   0.157582
+   0.710118
+   0.179779
+   0.404869
+   0.179779
+   0.423400
+   0.179779
+   0.106022
+   1.186779
+   0.910421
+   1.164582
+   0.814832
+   0.484743
+   1.186779
+   0.902210
+   0.921573
+   1.026257
+   0.729633
+   1.059308
+   0.816269
+   0.550603
+   0.497454
+   0.423400
+   0.381618
+   0.019257
+   0.483468
+   0.179779
+   0.328784
+   0.435828
+   0.019257
+   0.318104
+   0.019257
+   0.179779
+   0.179779
+   0.497454
+   0.296227
+   1.186779
+   0.371550
+   0.179779
+   0.497454
+   0.626094
+   0.456749
+   0.537861
+   0.179779
+   0.180391
+   0.484743
+   0.019257
+   0.985552
+   1.079092
+   0.761998
+   0.179779
+   1.156434
+   0.940446
+   0.435828
+   0.072091
+   0.359421
+   0.474959
+   0.266544
+   1.093239
+   0.513169
+   0.179779
+   0.953157
+   0.497769
+   1.048134
+   1.186779
+   0.782950
+   0.179779
+   0.179779
+   1.325104
+   1.164582
+   1.168563
+   1.197633
+   0.179779
+   0.674650
+   0.626094
+   0.474959
+   0.931343
+   0.106022
+   0.019257
+   0.543515
+   0.985552
+   0.722860
+   1.133945
+   1.079092
+   1.059308
+   1.186779
+   0.019257
+   0.674650
+   0.019257
+   0.106022
+   0.800846
+   0.543515
+   0.423400
+   0.823655
+   1.059308
+   0.019257
+   0.340913
+   0.887612
+   0.583922
+   0.233225
+   0.423698
+   0.543515
+   0.233225
+   0.456749
+   0.157582
+   0.266544
+   0.836083
+   0.869103
+   0.019257
+   0.179779
+   0.019257
+   1.186779
+   0.019257
+   0.749287
+   0.710118
+   0.637216
+   1.059308
+   0.019257
+   0.179779
+   1.186779
+   0.497454
+   0.912452
+   0.484743
+   1.014815
+   0.019257
+   0.775694
+   0.179779
+   0.179779
+   1.346638
+   1.346638
+   0.497769
+   1.133945
+   0.357272
+   1.209268
+   0.266544
+   0.296227
+   0.784203
+   0.921573
+   1.059308
+   1.164582
+   0.180391
+   0.019257
+   0.931343
+   0.711585
+   0.806499
+   1.014815
+   0.220484
+   0.179779
+   1.186779
+   0.954594
+   0.304438
+   1.026257
+   0.106022
+   0.729633
+   0.106022
+   1.038386
+   1.133945
+   1.164582
+   0.328784
+   1.164582
+   0.985552
+   0.856974
+   0.538474
+   1.079092
+   0.179779
+   0.179779
+   0.404869
+   1.164582
+   1.217417
+   1.059308
+   0.072091
+   0.340913
+   0.538474
+   0.220484
+   0.019257
+   0.909809
+   1.164582
+   0.474959
+   0.179779
+   0.126944
+   1.164582
+   0.019257
+   0.909809
+   1.186779
+   1.130651
+   0.573260
+   0.179779
+   0.404869
+   0.179779
+   0.126944
+   0.749287
+   1.059308
+   0.179779
+   0.583922
+   0.328784
+   0.423400
+   0.233225
+   0.624627
+   0.909809
+   0.474959
+   0.856974
+   0.180391
+   0.456749
+   0.985552
+   0.538474
+   1.164582
+   0.072091
+   1.186779
+   0.743781
+   0.106022
+   0.423698
+   0.729503
+   0.708880
+   1.048746
+   0.484743
+   0.328784
+   0.318104
+   0.775694
+   0.782337
+   0.179779
+   0.806499
+   0.456749
+   1.026257
+   0.336932
+   0.848763
+   1.014815
+   0.985552
+   0.423400
+   0.457362
+   1.130651
+   0.715355
+   0.869716
+   0.126944
+   0.497454
+   0.336634
+   1.026257
+   0.179779
+   1.186779
+   0.456749
+   1.186779
+   0.019257
+   1.026257
+   1.026257
+   0.179779
+   0.179779
+   0.179779
+   0.484743
+   0.220484
+   0.357272
+   0.456749
+   1.028962
+   0.823043
+[2024-10-12T03:50:44.177-0500] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-10-12T03:50:44.220-0500] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=train_dag, task_id=prediction_model, run_id=manual__2024-10-12T08:28:04.360807+00:00, execution_date=20241012T082804, start_date=20241012T084953, end_date=20241012T085044
+[2024-10-12T03:50:44.293-0500] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2024-10-12T03:50:44.334-0500] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-10-12T03:50:44.337-0500] {local_task_job_runner.py:222} INFO - ::endgroup::

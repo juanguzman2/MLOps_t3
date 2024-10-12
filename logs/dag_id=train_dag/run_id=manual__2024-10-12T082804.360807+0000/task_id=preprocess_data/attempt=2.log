@@ -1,0 +1,127 @@
+[2024-10-12T04:05:27.131-0500] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-10-12T04:05:27.161-0500] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: train_dag.preprocess_data manual__2024-10-12T08:28:04.360807+00:00 [queued]>
+[2024-10-12T04:05:27.172-0500] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: train_dag.preprocess_data manual__2024-10-12T08:28:04.360807+00:00 [queued]>
+[2024-10-12T04:05:27.173-0500] {taskinstance.py:2306} INFO - Starting attempt 2 of 2
+[2024-10-12T04:05:27.186-0500] {taskinstance.py:2330} INFO - Executing <Task(_PythonVirtualenvDecoratedOperator): preprocess_data> on 2024-10-12 08:28:04.360807+00:00
+[2024-10-12T04:05:27.196-0500] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62: DeprecationWarning: This process (pid=173) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-12T04:05:27.198-0500] {standard_task_runner.py:64} INFO - Started process 182 to run task
+[2024-10-12T04:05:27.197-0500] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'train_dag', 'preprocess_data', 'manual__2024-10-12T08:28:04.360807+00:00', '--job-id', '34', '--raw', '--subdir', 'DAGS_FOLDER/train/train_dag.py', '--cfg-path', '/tmp/tmpmb5d6hof']
+[2024-10-12T04:05:27.199-0500] {standard_task_runner.py:91} INFO - Job 34: Subtask preprocess_data
+[2024-10-12T04:05:27.245-0500] {task_command.py:426} INFO - Running <TaskInstance: train_dag.preprocess_data manual__2024-10-12T08:28:04.360807+00:00 [running]> on host 9f5514a2a604
+[2024-10-12T04:05:27.331-0500] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='train_dag' AIRFLOW_CTX_TASK_ID='preprocess_data' AIRFLOW_CTX_EXECUTION_DATE='2024-10-12T08:28:04.360807+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-12T08:28:04.360807+00:00'
+[2024-10-12T04:05:27.333-0500] {taskinstance.py:430} INFO - ::endgroup::
+[2024-10-12T04:05:27.335-0500] {process_utils.py:183} INFO - Executing cmd: /home/***/.local/bin/python -m virtualenv /tmp/venv2waks5q4 --python=python
+[2024-10-12T04:05:27.336-0500] {process_utils.py:187} INFO - Output:
+[2024-10-12T04:05:30.764-0500] {process_utils.py:191} INFO - created virtual environment CPython3.12.4.final.0-64 in 786ms
+[2024-10-12T04:05:30.765-0500] {process_utils.py:191} INFO -   creator CPython3Posix(dest=/tmp/venv2waks5q4, clear=False, no_vcs_ignore=False, global=False)
+[2024-10-12T04:05:30.766-0500] {process_utils.py:191} INFO -   seeder FromAppData(download=False, pip=bundle, via=copy, app_data_dir=/home/***/.local/share/virtualenv)
+[2024-10-12T04:05:30.767-0500] {process_utils.py:191} INFO -     added seed packages: pip==24.1
+[2024-10-12T04:05:30.768-0500] {process_utils.py:191} INFO -   activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+[2024-10-12T04:05:30.816-0500] {process_utils.py:183} INFO - Executing cmd: /tmp/venv2waks5q4/bin/pip install -r /tmp/venv2waks5q4/requirements.txt
+[2024-10-12T04:05:30.817-0500] {process_utils.py:187} INFO - Output:
+[2024-10-12T04:05:44.126-0500] {process_utils.py:191} INFO - Collecting feature-engine (from -r /tmp/venv2waks5q4/requirements.txt (line 1))
+[2024-10-12T04:05:44.135-0500] {process_utils.py:191} INFO -   Using cached feature_engine-1.8.1-py2.py3-none-any.whl.metadata (9.8 kB)
+[2024-10-12T04:05:44.667-0500] {process_utils.py:191} INFO - Collecting numpy (from -r /tmp/venv2waks5q4/requirements.txt (line 2))
+[2024-10-12T04:05:44.784-0500] {process_utils.py:191} INFO -   Downloading numpy-2.1.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (60 kB)
+[2024-10-12T04:05:44.851-0500] {process_utils.py:191} INFO -      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.9/60.9 kB 851.6 kB/s eta 0:00:00
+[2024-10-12T04:05:45.269-0500] {process_utils.py:191} INFO - Collecting pandas (from -r /tmp/venv2waks5q4/requirements.txt (line 3))
+[2024-10-12T04:05:45.274-0500] {process_utils.py:191} INFO -   Using cached pandas-2.2.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (89 kB)
+[2024-10-12T04:05:45.649-0500] {process_utils.py:191} INFO - Collecting scikit-learn (from -r /tmp/venv2waks5q4/requirements.txt (line 4))
+[2024-10-12T04:05:45.654-0500] {process_utils.py:191} INFO -   Using cached scikit_learn-1.5.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (13 kB)
+[2024-10-12T04:05:46.019-0500] {process_utils.py:191} INFO - Collecting scipy>=1.4.1 (from feature-engine->-r /tmp/venv2waks5q4/requirements.txt (line 1))
+[2024-10-12T04:05:46.025-0500] {process_utils.py:191} INFO -   Using cached scipy-1.14.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (60 kB)
+[2024-10-12T04:05:46.232-0500] {process_utils.py:191} INFO - Collecting statsmodels>=0.11.1 (from feature-engine->-r /tmp/venv2waks5q4/requirements.txt (line 1))
+[2024-10-12T04:05:46.237-0500] {process_utils.py:191} INFO -   Using cached statsmodels-0.14.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.2 kB)
+[2024-10-12T04:05:46.455-0500] {process_utils.py:191} INFO - Collecting python-dateutil>=2.8.2 (from pandas->-r /tmp/venv2waks5q4/requirements.txt (line 3))
+[2024-10-12T04:05:46.491-0500] {process_utils.py:191} INFO -   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+[2024-10-12T04:05:46.733-0500] {process_utils.py:191} INFO - Collecting pytz>=2020.1 (from pandas->-r /tmp/venv2waks5q4/requirements.txt (line 3))
+[2024-10-12T04:05:46.771-0500] {process_utils.py:191} INFO -   Downloading pytz-2024.2-py2.py3-none-any.whl.metadata (22 kB)
+[2024-10-12T04:05:46.861-0500] {process_utils.py:191} INFO - Collecting tzdata>=2022.7 (from pandas->-r /tmp/venv2waks5q4/requirements.txt (line 3))
+[2024-10-12T04:05:46.896-0500] {process_utils.py:191} INFO -   Downloading tzdata-2024.2-py2.py3-none-any.whl.metadata (1.4 kB)
+[2024-10-12T04:05:47.166-0500] {process_utils.py:191} INFO - Collecting joblib>=1.2.0 (from scikit-learn->-r /tmp/venv2waks5q4/requirements.txt (line 4))
+[2024-10-12T04:05:47.228-0500] {process_utils.py:191} INFO -   Downloading joblib-1.4.2-py3-none-any.whl.metadata (5.4 kB)
+[2024-10-12T04:05:47.401-0500] {process_utils.py:191} INFO - Collecting threadpoolctl>=3.1.0 (from scikit-learn->-r /tmp/venv2waks5q4/requirements.txt (line 4))
+[2024-10-12T04:05:47.453-0500] {process_utils.py:191} INFO -   Using cached threadpoolctl-3.5.0-py3-none-any.whl.metadata (13 kB)
+[2024-10-12T04:05:47.551-0500] {process_utils.py:191} INFO - Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas->-r /tmp/venv2waks5q4/requirements.txt (line 3))
+[2024-10-12T04:05:47.585-0500] {process_utils.py:191} INFO -   Downloading six-1.16.0-py2.py3-none-any.whl.metadata (1.8 kB)
+[2024-10-12T04:05:47.726-0500] {process_utils.py:191} INFO - Collecting patsy>=0.5.6 (from statsmodels>=0.11.1->feature-engine->-r /tmp/venv2waks5q4/requirements.txt (line 1))
+[2024-10-12T04:05:47.731-0500] {process_utils.py:191} INFO -   Using cached patsy-0.5.6-py2.py3-none-any.whl.metadata (3.5 kB)
+[2024-10-12T04:05:47.836-0500] {process_utils.py:191} INFO - Collecting packaging>=21.3 (from statsmodels>=0.11.1->feature-engine->-r /tmp/venv2waks5q4/requirements.txt (line 1))
+[2024-10-12T04:05:47.866-0500] {process_utils.py:191} INFO -   Downloading packaging-24.1-py3-none-any.whl.metadata (3.2 kB)
+[2024-10-12T04:05:47.907-0500] {process_utils.py:191} INFO - Using cached feature_engine-1.8.1-py2.py3-none-any.whl (364 kB)
+[2024-10-12T04:05:47.942-0500] {process_utils.py:191} INFO - Downloading numpy-2.1.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.0 MB)
+[2024-10-12T04:05:56.480-0500] {process_utils.py:191} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.0/16.0 MB 1.6 MB/s eta 0:00:00
+[2024-10-12T04:05:56.485-0500] {process_utils.py:191} INFO - Using cached pandas-2.2.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.7 MB)
+[2024-10-12T04:05:56.544-0500] {process_utils.py:191} INFO - Using cached scikit_learn-1.5.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.9 MB)
+[2024-10-12T04:05:56.638-0500] {process_utils.py:191} INFO - Downloading joblib-1.4.2-py3-none-any.whl (301 kB)
+[2024-10-12T04:06:02.504-0500] {process_utils.py:191} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 301.8/301.8 kB 72.6 kB/s eta 0:00:00
+[2024-10-12T04:06:02.540-0500] {process_utils.py:191} INFO - Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+[2024-10-12T04:06:02.637-0500] {process_utils.py:191} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 2.4 MB/s eta 0:00:00
+[2024-10-12T04:06:02.664-0500] {process_utils.py:191} INFO - Downloading pytz-2024.2-py2.py3-none-any.whl (508 kB)
+[2024-10-12T04:06:02.885-0500] {process_utils.py:191} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 508.0/508.0 kB 2.4 MB/s eta 0:00:00
+[2024-10-12T04:06:02.899-0500] {process_utils.py:191} INFO - Using cached scipy-1.14.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (40.8 MB)
+[2024-10-12T04:06:05.750-0500] {process_utils.py:191} INFO - Using cached statsmodels-0.14.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (10.7 MB)
+[2024-10-12T04:06:07.665-0500] {process_utils.py:191} INFO - Using cached threadpoolctl-3.5.0-py3-none-any.whl (18 kB)
+[2024-10-12T04:06:07.743-0500] {process_utils.py:191} INFO - Downloading tzdata-2024.2-py2.py3-none-any.whl (346 kB)
+[2024-10-12T04:06:08.516-0500] {process_utils.py:191} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 346.6/346.6 kB 444.1 kB/s eta 0:00:00
+[2024-10-12T04:06:08.555-0500] {process_utils.py:191} INFO - Downloading packaging-24.1-py3-none-any.whl (53 kB)
+[2024-10-12T04:06:08.619-0500] {process_utils.py:191} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 54.0/54.0 kB 877.5 kB/s eta 0:00:00
+[2024-10-12T04:06:08.622-0500] {process_utils.py:191} INFO - Using cached patsy-0.5.6-py2.py3-none-any.whl (233 kB)
+[2024-10-12T04:06:08.655-0500] {process_utils.py:191} INFO - Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+[2024-10-12T04:06:09.222-0500] {process_utils.py:191} INFO - Installing collected packages: pytz, tzdata, threadpoolctl, six, packaging, numpy, joblib, scipy, python-dateutil, patsy, scikit-learn, pandas, statsmodels, feature-engine
+[2024-10-12T04:07:09.454-0500] {process_utils.py:191} INFO - Successfully installed feature-engine-1.8.1 joblib-1.4.2 numpy-2.1.2 packaging-24.1 pandas-2.2.3 patsy-0.5.6 python-dateutil-2.9.0.post0 pytz-2024.2 scikit-learn-1.5.2 scipy-1.14.1 six-1.16.0 statsmodels-0.14.4 threadpoolctl-3.5.0 tzdata-2024.2
+[2024-10-12T04:07:09.754-0500] {process_utils.py:191} INFO - 
+[2024-10-12T04:07:09.754-0500] {process_utils.py:191} INFO - [notice] A new release of pip is available: 24.1 -> 24.2
+[2024-10-12T04:07:09.755-0500] {process_utils.py:191} INFO - [notice] To update, run: python -m pip install --upgrade pip
+[2024-10-12T04:07:10.024-0500] {process_utils.py:183} INFO - Executing cmd: /tmp/venv2waks5q4/bin/python /tmp/venv-calluyo0qhow/script.py /tmp/venv-calluyo0qhow/script.in /tmp/venv-calluyo0qhow/script.out /tmp/venv-calluyo0qhow/string_args.txt /tmp/venv-calluyo0qhow/termination.log
+[2024-10-12T04:07:10.025-0500] {process_utils.py:187} INFO - Output:
+[2024-10-12T04:07:10.119-0500] {process_utils.py:191} INFO - Traceback (most recent call last):
+[2024-10-12T04:07:10.120-0500] {process_utils.py:191} INFO -   File "/tmp/venv-calluyo0qhow/script.py", line 63, in <module>
+[2024-10-12T04:07:10.121-0500] {process_utils.py:191} INFO -     res = task_preprocess_data(*arg_dict["args"], **arg_dict["kwargs"])
+[2024-10-12T04:07:10.121-0500] {process_utils.py:191} INFO -           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-10-12T04:07:10.122-0500] {process_utils.py:191} INFO -   File "/tmp/venv-calluyo0qhow/script.py", line 20, in task_preprocess_data
+[2024-10-12T04:07:10.122-0500] {process_utils.py:191} INFO -     data = pd.read_csv('/opt/***/dags/data/inputs/xtrain.csv')
+[2024-10-12T04:07:10.123-0500] {process_utils.py:191} INFO -            ^^
+[2024-10-12T04:07:10.124-0500] {process_utils.py:191} INFO - NameError: name 'pd' is not defined. Did you mean: 'id'?
+[2024-10-12T04:07:10.503-0500] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-10-12T04:07:10.511-0500] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/decorators/base.py", line 265, in execute
+    return_value = super().execute(context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 437, in execute
+    return super().execute(context=serializable_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 759, in execute_callable
+    result = self._execute_python_callable_in_subprocess(python_path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 514, in _execute_python_callable_in_subprocess
+    raise AirflowException(error_msg) from None
+airflow.exceptions.AirflowException: Process returned non-zero exit status 1.
+name 'pd' is not defined
+[2024-10-12T04:07:10.534-0500] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=train_dag, task_id=preprocess_data, run_id=manual__2024-10-12T08:28:04.360807+00:00, execution_date=20241012T082804, start_date=20241012T090527, end_date=20241012T090710
+[2024-10-12T04:07:10.551-0500] {standard_task_runner.py:110} ERROR - Failed to execute job 34 for task preprocess_data (Process returned non-zero exit status 1.
+name 'pd' is not defined; 182)
+[2024-10-12T04:07:10.594-0500] {local_task_job_runner.py:243} INFO - Task exited with return code 1
+[2024-10-12T04:07:10.622-0500] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-12T04:07:10.626-0500] {local_task_job_runner.py:222} INFO - ::endgroup::

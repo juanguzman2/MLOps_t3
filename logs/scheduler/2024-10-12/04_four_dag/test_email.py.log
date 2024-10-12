@@ -1,0 +1,32 @@
+[2024-10-12T00:16:31.333-0500] {processor.py:161} INFO - Started process (PID=87) to work on /opt/airflow/dags/04_four_dag/test_email.py
+[2024-10-12T00:16:31.374-0500] {processor.py:830} INFO - Processing file /opt/airflow/dags/04_four_dag/test_email.py for tasks to queue
+[2024-10-12T00:16:31.503-0500] {logging_mixin.py:188} INFO - [2024-10-12T00:16:31.500-0500] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/04_four_dag/test_email.py
+[2024-10-12T00:16:32.122-0500] {processor.py:840} INFO - DAG(s) 'email_test_dag' retrieved from /opt/airflow/dags/04_four_dag/test_email.py
+[2024-10-12T00:16:32.692-0500] {logging_mixin.py:188} INFO - [2024-10-12T00:16:32.691-0500] {override.py:1858} INFO - Created Permission View: can edit on DAG:email_test_dag
+[2024-10-12T00:16:32.721-0500] {logging_mixin.py:188} INFO - [2024-10-12T00:16:32.720-0500] {override.py:1858} INFO - Created Permission View: can read on DAG:email_test_dag
+[2024-10-12T00:16:32.732-0500] {logging_mixin.py:188} INFO - [2024-10-12T00:16:32.731-0500] {override.py:1858} INFO - Created Permission View: can delete on DAG:email_test_dag
+[2024-10-12T00:16:32.733-0500] {logging_mixin.py:188} INFO - [2024-10-12T00:16:32.733-0500] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-10-12T00:16:32.800-0500] {logging_mixin.py:188} INFO - [2024-10-12T00:16:32.799-0500] {dag.py:3111} INFO - Creating ORM DAG for email_test_dag
+[2024-10-12T00:16:32.864-0500] {logging_mixin.py:188} INFO - [2024-10-12T00:16:32.856-0500] {dag.py:3947} INFO - Setting next_dagrun for email_test_dag to 2022-08-21 05:00:00+00:00, run_after=2022-08-21 05:00:00+00:00
+[2024-10-12T00:16:32.911-0500] {processor.py:183} INFO - Processing /opt/airflow/dags/04_four_dag/test_email.py took 1.879 seconds
+[2024-10-12T00:17:05.361-0500] {processor.py:161} INFO - Started process (PID=106) to work on /opt/airflow/dags/04_four_dag/test_email.py
+[2024-10-12T00:17:05.362-0500] {processor.py:830} INFO - Processing file /opt/airflow/dags/04_four_dag/test_email.py for tasks to queue
+[2024-10-12T00:17:05.365-0500] {logging_mixin.py:188} INFO - [2024-10-12T00:17:05.364-0500] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/04_four_dag/test_email.py
+[2024-10-12T00:17:05.421-0500] {processor.py:840} INFO - DAG(s) 'email_test_dag' retrieved from /opt/airflow/dags/04_four_dag/test_email.py
+[2024-10-12T00:17:05.463-0500] {logging_mixin.py:188} INFO - [2024-10-12T00:17:05.463-0500] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-10-12T00:17:05.774-0500] {logging_mixin.py:188} INFO - [2024-10-12T00:17:05.770-0500] {dag.py:3947} INFO - Setting next_dagrun for email_test_dag to 2022-08-21 05:00:00+00:00, run_after=2022-08-21 05:00:00+00:00
+[2024-10-12T00:17:06.085-0500] {processor.py:183} INFO - Processing /opt/airflow/dags/04_four_dag/test_email.py took 0.729 seconds
+[2024-10-12T00:17:39.786-0500] {processor.py:161} INFO - Started process (PID=127) to work on /opt/airflow/dags/04_four_dag/test_email.py
+[2024-10-12T00:17:39.787-0500] {processor.py:830} INFO - Processing file /opt/airflow/dags/04_four_dag/test_email.py for tasks to queue
+[2024-10-12T00:17:39.790-0500] {logging_mixin.py:188} INFO - [2024-10-12T00:17:39.789-0500] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/04_four_dag/test_email.py
+[2024-10-12T00:17:39.817-0500] {processor.py:840} INFO - DAG(s) 'email_test_dag' retrieved from /opt/airflow/dags/04_four_dag/test_email.py
+[2024-10-12T00:17:40.123-0500] {logging_mixin.py:188} INFO - [2024-10-12T00:17:40.122-0500] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-10-12T00:17:40.199-0500] {logging_mixin.py:188} INFO - [2024-10-12T00:17:40.199-0500] {dag.py:3947} INFO - Setting next_dagrun for email_test_dag to 2022-08-21 05:00:00+00:00, run_after=2022-08-21 05:00:00+00:00
+[2024-10-12T00:17:40.250-0500] {processor.py:183} INFO - Processing /opt/airflow/dags/04_four_dag/test_email.py took 0.473 seconds
+[2024-10-12T00:18:10.642-0500] {processor.py:161} INFO - Started process (PID=146) to work on /opt/airflow/dags/04_four_dag/test_email.py
+[2024-10-12T00:18:10.643-0500] {processor.py:830} INFO - Processing file /opt/airflow/dags/04_four_dag/test_email.py for tasks to queue
+[2024-10-12T00:18:10.645-0500] {logging_mixin.py:188} INFO - [2024-10-12T00:18:10.645-0500] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/04_four_dag/test_email.py
+[2024-10-12T00:18:10.671-0500] {processor.py:840} INFO - DAG(s) 'email_test_dag' retrieved from /opt/airflow/dags/04_four_dag/test_email.py
+[2024-10-12T00:18:10.710-0500] {logging_mixin.py:188} INFO - [2024-10-12T00:18:10.709-0500] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-10-12T00:18:10.767-0500] {logging_mixin.py:188} INFO - [2024-10-12T00:18:10.766-0500] {dag.py:3947} INFO - Setting next_dagrun for email_test_dag to 2022-08-21 05:00:00+00:00, run_after=2022-08-21 05:00:00+00:00
+[2024-10-12T00:18:10.799-0500] {processor.py:183} INFO - Processing /opt/airflow/dags/04_four_dag/test_email.py took 0.167 seconds
